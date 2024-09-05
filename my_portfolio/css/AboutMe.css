@@ -1,0 +1,389 @@
+/* General style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* Animated background */
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(
+    315deg,
+    rgb(241, 241, 241) 3%,
+    rgba(60, 132, 206, 1) 38%,
+    rgba(48, 238, 226, 1) 68%,
+    rgb(4, 7, 79) 98%
+  );
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  animation: gradie nt 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Wave effect */
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(1);
+  }
+}
+
+/* Header styling */
+header {
+  background-image: linear-gradient(to top right, #21618c, rgb(42, 42, 42));
+  height: 10vh;
+}
+
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+  height: 10vh;
+}
+
+#header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 35vw;
+  height: 10vh;
+  margin-left: 1vw;
+}
+
+header h1 {
+  color: cornflowerblue;
+}
+
+.header-anchor {
+  text-decoration: none;
+  color: white;
+  width: 7.5vw;
+  padding: 10px;
+  display: inline-block;
+  transition: 0.3s;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.header-anchor:hover {
+  background-color: rgba(33, 97, 140, 0.5);
+  border: 2px solid #21618c;
+  box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-anchor.active {
+  background-color: rgba(33, 97, 140, 0.7);
+  border: 2px solid #21618c;
+  box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Main styling */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 85vh;
+}
+
+.box {
+  height: 5vh;
+  width: 25vh;
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Who am i? box styling*/
+
+#box1 p {
+  display: none;
+}
+
+#box1:hover p {
+  display: block;
+}
+
+#box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: height 1s ease, width 1s ease 0.3s, transform 1s ease;
+}
+
+#box1:hover {
+  height: 45vh;
+  width: 33vh;
+  background-image: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.31),
+    rgba(39, 9, 206, 0.31)
+  );
+  border: none;
+}
+
+.box h2 {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#who {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 5vh;
+  transition: width 0.5s ease;
+}
+
+#who h2 {
+  margin: 0;
+  text-align: center;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+#box1:hover #who {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21618c;
+  width: 15vw;
+  border-radius: 25px;
+  height: 5vh;
+}
+
+#box1:hover #who h2 {
+  background-color: #21618c;
+  width: 15vw;
+  border-radius: 25px;
+  height: 5vh;
+}
+
+/* My skills box styling */
+
+#box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vh;
+  height: 5vh;
+  transition: height 1s ease, width 1s ease 0.3s, transform 1s ease;
+}
+
+#box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 65vw;
+  height: 50vh;
+}
+
+#box2:hover {
+  height: 50vh;
+  width: 65vw;
+  background-image: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.31),
+    rgba(39, 9, 206, 0.31)
+  );
+  border: none;
+}
+
+#MySkills {
+  transition: width 0.5s ease;
+  width: 10vw;
+}
+
+#MySkills h2 {
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+#box2:hover #MySkills {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #21618c;
+  width: 60vw;
+  border-radius: 25px;
+  height: 5vh;
+}
+
+#box2:hover #MySkills h2 {
+  background-color: #21618c;
+  width: 60vw;
+  border-radius: 25px;
+  height: 5vh;
+}
+
+/* creating the box but making it invinsible */
+.hidden-content {
+  height: 0;
+  width: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: height 0.5s ease, width 2s ease, transform 1s ease;
+  overflow: hidden;
+  opacity: 0.2;
+}
+
+/* Making the box visiblke on hover */
+#box2:hover .hidden-content {
+  height: 27vh;
+  width: 20vw;
+  padding: 7px;
+}
+
+.hidden-content:hover {
+  transition: background-color 0.5s ease;
+  opacity: 1;
+}
+
+.hidden-content h2 {
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.hidden-content:hover h2 {
+  background-color: #21618c;
+  border-radius: 25px;
+}
+
+.hidden-content p {
+  transition: background-color 0.5s ease;
+}
+
+.hidden-content:hover p {
+  padding: 7px;
+  border-radius: 25px;
+  background-color: #21618c;
+}
+
+/* My Resume box style */
+#box3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vh;
+  height: 5vh;
+  transition: height 1s ease, width 1s ease 0.3s, transform 1s ease;
+}
+
+#box3:hover {
+  height: 80vh;
+  width: 35vw;
+  background-image: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.31),
+    rgba(39, 9, 206, 0.31)
+  );
+  border: none;
+}
+
+#MyResume {
+  transition: width 0.5s ease;
+  width: 10vw;
+}
+
+#MyResume h2 {
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+#box3:hover #MyResume {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #21618c;
+  width: 30vw;
+  border-radius: 25px;
+  height: 5vh;
+}
+
+#box3:hover #MyResume h2 {
+  background-color: #21618c;
+  width: 30vw;
+  border-radius: 25px;
+  height: 5vh;
+}
+
+#image {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+}
+
+/* Footer styling */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  background-image: linear-gradient(to top right, #21618c, rgb(42, 42, 42));
+}
