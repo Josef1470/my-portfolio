@@ -1,0 +1,85 @@
+#home-container:hover {
+  height: 40vh;
+  width: 60vh;
+}
+#home-container {
+  height: 35vh;
+  width: 50vh;
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: width 0.5s, height 1s;
+}
+
+#home-container:hover {
+  height: 40vh;
+  width: 60vh;
+}
+
+#home-container img {
+  transition: 2s;
+}
+
+#home-container:hover img {
+  width: 100px;
+  height: 100px;
+}
+
+#main-text p {
+  transition: font-size 4s ease, opacity 4s ease;
+  opacity: 0;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+#home-container:hover #main-text p {
+  opacity: 1;
+  visibility: visible;
+  font-size: 20px;
+}
+
+#hide2 {
+  transition: opacity 4s ease, visibility 4s ease;
+}
+
+#home-container:hover #hide2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+#hide {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  color: black;
+}
+
+#home-container:hover #hide {
+  display: none;
+}
+
+#main-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 19vw;
+}
+
+#JosefIMG {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
